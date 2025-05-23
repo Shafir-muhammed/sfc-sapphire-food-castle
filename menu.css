@@ -1,0 +1,127 @@
+/* !   main    */
+
+.section-1 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 5rem 0;
+  background-color: var(--background-dark);
+}
+
+.section-1 h4 {
+  grid-column: 1 / -1;
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 4rem;
+  color: var(--primary-color);
+}
+.section-1 h2 {
+  grid-column: 1 / -1;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  font-family: var(--primary-font);
+  color: #fff;
+  letter-spacing: 1.5px;
+}
+
+/*! segement button */
+
+.segmented-button {
+  margin: 0 auto;
+  max-width: 400px;
+  display: flex;
+  border-radius: 50px;
+  overflow: hidden;
+  grid-column: 1 / -1;
+  margin-bottom: 2rem;
+}
+
+.segmented-button button {
+  flex: 1;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 0.8rem;
+  text-transform: capitalize;
+}
+
+.segmented-button button.active {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.segmented-button button:not(.active) {
+  background-color: black;
+  color: white;
+}
+
+/*! segement button */
+
+.section-1 .img-container {
+  position: relative;
+  &::after {
+    content: "BBQ Chicken";
+    position: absolute;
+    color: var(--primary-color);
+    display: inline-block;
+    bottom: 0.5rem;
+    right: 0.5rem;
+    padding: 0.4rem 1rem;
+    background-color: var(--background-dark);
+    border-radius: 10px;
+    font-size: 0.8rem;
+  }
+}
+.section-1 img {
+  max-width: 100%;
+  min-height: 100%;
+}
+
+/* !  media query */
+
+@media (max-width: 1050px) {
+}
+
+@media (max-width: 900px) {
+  .menu-items {
+    min-width: 310px;
+    max-width: 350px;
+  }
+  .section-1 {
+    grid-template-columns: 1fr 1fr;
+  }
+  .menu-items:last-child {
+    grid-column: 1 / -1;
+  }
+}
+
+/* 
+
+
+ ! media query
+
+
+
+*/
+
+@media (max-width: 600px) {
+  .section-1 {
+    grid-template-columns: minmax(300px, 400px);
+    padding: 3rem 0;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .section-1 h4,
+  .section-1 h4,
+  .segmented-button {
+    margin-bottom: 0;
+  }
+
+  .section-1 h4 {
+    font-size: 2.5rem;
+  }
+  .section-1 h4 {
+    font-size: 1.5rem;
+  }
+}

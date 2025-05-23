@@ -1,0 +1,22 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+  list-style: none;
+  text-decoration: none;
+}
+
+:root {
+  --primary-font: "Emblema One", system-ui;
+  --secondary-font: "Poppins", sans-serif;
+  --normal-font: "Roboto", sans-serif;
+  --primary-color: #fb5b21;
+  --background-dark: #222429;
+  font-family: var(--secondary-font);
+  scroll-behavior: smooth;
+}
+
+a {
+  color: black;
+}
